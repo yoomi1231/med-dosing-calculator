@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="index.js"></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="calcuator-container">
+                <h1>Medication Dose Calculator</h1>
+                <form class="js-form" onsubmit="return false">
+                    <div class="form-group">
+                        <label for="medications">Choose a Medication:</label><br>
+                        <select id="medications" name="medications">
+                            <option value="Tylenol">Tylenol 160mg/5ml Suspension</option>
+                            <option value="Motrin">Motrin 100mg/5ml suspension</option>
+                            <option value="Motrin-Infant">Motrin Infant Concentrate 50mg/1.25ml</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Age</label><br>
+                        <input type=text id="age" name="age" />
+                        <select id="ageUnit" name="ageUnit">
+                            <option value="month">month</option>
+                            <option value="year">year</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group"> 
+                        <label>Body Weight</label><br>
+                        <input type=text id="weight" name="weight" />
+                        <select id="weightUnit" name="weightUnit">
+                            <option value="kg">kg</option>
+                            <option value="lbs">lbs</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button id="myBtn" onclick="calculateDose()">Submit</button> 
+                    </div>
+                
+                </form>
+            </div>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <h2 class="output"></h2>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
